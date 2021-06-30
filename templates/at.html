@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+  <title>jdbc</title>
+</head>
+<body>
+  <center>
+
+
+
+<style>
+body {
+  margin: 0;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+table{
+border-collapse: 
+collapse; border-spacing: 0; 
+border-color: #000000 ;
+border-width: 2px;
+height:100px;
+}
+td, th {  
+    height: 30px; 
+    border-width: 2px;
+
+}
+tr:nth-child(1) td { background: #F1F1F1; }   
+ td {  
+    text-align: center;
+}
+th {  
+    background: #DFDFDF;  
+    font-weight: bold;
+}
+
+</style>
+<br>
+<br>
+   
+   <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>AllCategoriesAppearedBoys</th>
+      <th>AllCategoriesAppearedGirls</th>
+      <th>AllCategoriesTotal</th>
+      <th>AllCategoriesPassedBoys</th>
+      <th>AllCategoriesPassedGirls</th>
+      <th>AllCategoriesPassedTotal</th>
+      <th>ScheduledCasteStudentsAppearedBoys</th>
+      <th> ScheduledCasteStudentsAppearedGirls</th>
+      <th>ScheduledCasteStudentsAppearedTotal</th>
+      <th>ScheduledCasteStudentsPassedBoys</th>
+      <th>ScheduledCasteStudentsPassedGirls </th>
+      <th>ScheduledCasteStudentsPassedTotal</th>
+      <th>ScheduledTribeStudentsAppearedBoys</th>
+      <th>ScheduledTribeStudentsAppearedGirls</th>
+      <th>ScheduledTribeStudentsAppearedTotal</th>
+    </tr>
+    {% for result in sub %}
+    <tr>
+      <td>{{result.Name}}</td>
+      <td>{{result.AllCategoriesAppearedBoys}}</td>
+      <td>{{result.AllCategoriesAppearedGirls}}</td>
+      <td>{{result.AllCategoriesTotal}}</td>
+      <td>{{result.AllCategoriesPassedBoys}}</td>
+      <td>{{result.AllCategoriesPassedGirls}}</td>
+      <td>{{result.AllCategoriesPassedTotal}}</td>
+      <td>{{result.ScheduledCasteStudentsAppearedBoys}}</td>
+      <td>{{result.ScheduledCasteStudentsAppearedGirls}}</td>
+      <td>{{result.ScheduledCasteStudentsAppearedTotal}}</td>
+      <td>{{result.ScheduledCasteStudentsPassedBoys}}</td>     
+      <td>ScheduledCasteStudentsPassedGirls </td>
+      <td>ScheduledCasteStudentsPassedTotal</td>
+      <td>ScheduledTribeStudentsAppearedBoys</td>
+      <td>ScheduledTribeStudentsAppearedGirls</td>
+      <td>ScheduledTribeStudentsAppearedTotal</td>
+    </tr>
+    {% endfor %}
+  </table>
+  </center>
+</body>
+</html>
+
